@@ -1,0 +1,77 @@
+@use './assets/variables.scss';
+
+.wrapper{
+    max-width: 90rem;
+    margin: auto;
+    padding: 0 4.85rem;
+
+    header{
+        span{
+            font-family: variables.$inconsolata-font-family;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+    .content{
+        gap: 4rem;
+        display: grid;
+        grid-template-columns: 1fr minmax(290px, 1fr);
+        margin: 6rem 0;
+        .image{
+            max-width: 33.7rem;
+            max-height: 27.96rem;
+            margin: 0 auto;
+            img{
+                width: 100%;
+                height: auto; 
+            }
+        }
+        .text{
+            flex: 1;
+            span{
+                font-size: 4rem;
+                color: variables.$gray-01;
+                font-weight: 700;
+            }
+            p{  
+                font-size: 1.5rem;
+                color: variables.$gray-02;
+                max-width: 24rem;
+                margin-top: 2.25rem;
+            }
+            button{
+                margin-top: 4rem;
+                background-color: variables.$gray-01;
+                font-size: 0.875rem;
+                font-weight: 700;
+                color: variables.$white;
+                border: none;
+                width: 13.5rem;
+                height: 4.25rem;
+                cursor: pointer;
+            }
+        }
+
+    }
+    footer{
+        font-size: 0.875rem;
+        color: #BDBDBD;
+        font-weight: 700;
+        font-family: variables.$montserrat-font-family;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 768px){
+    html{
+        font-size: 87.5%;
+    }
+    .wrapper{
+        padding: 0 .85rem;
+        .content {
+            grid-template-columns: 1fr;
+        }
+    }
+}
